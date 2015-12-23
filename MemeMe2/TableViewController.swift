@@ -11,6 +11,8 @@ import UIKit
 
 class TableViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     // Access to memes array in AppDelegate.swift
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -38,7 +40,7 @@ class TableViewController: UIViewController {
         let meme = appDelegate.memes[indexPath.row]
         let detailedController = storyboard?.instantiateViewControllerWithIdentifier("DetailedVC") as! DetailedViewController
         
-        detailedController.meme = meme.memedImage
+        detailedController.meme = meme
         
         navigationController?.pushViewController(detailedController, animated: true)
     }

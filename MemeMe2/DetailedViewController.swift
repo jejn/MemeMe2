@@ -11,4 +11,6 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
+    var meme: Meme?
+    
 }
