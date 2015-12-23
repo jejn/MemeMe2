@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-416.5" y="615.5"/>
         </scene>
-        <!--Table-->
+        <!--Navigation Controller-->
         <scene sceneID="5QE-nE-DSQ">
             <objects>
                 <navigationController id="f8w-6H-i2K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="xBw-WI-lB9"/>
+                    <tabBarItem key="tabBarItem" title="" image="Table" id="xBw-WI-lB9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ykh-b3-eat">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -43,11 +43,11 @@
             </objects>
             <point key="canvasLocation" x="77.5" y="259.5"/>
         </scene>
-        <!--Collection-->
+        <!--Navigation Controller-->
         <scene sceneID="Vlm-p3-7fD">
             <objects>
                 <navigationController id="6Zd-oT-n3A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="VQF-7i-q4u"/>
+                    <tabBarItem key="tabBarItem" title="" image="Collection" id="VQF-7i-q4u"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jpD-SQ-nug">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -263,6 +263,10 @@
             <point key="canvasLocation" x="1682.5" y="615.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Collection" width="30" height="30"/>
+        <image name="Table" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lTw-mY-WmS"/>
     </inferredMetricsTieBreakers>
