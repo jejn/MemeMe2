@@ -16,6 +16,23 @@ class TableViewController: UIViewController {
     // Access to memes array in AppDelegate.swift
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    
+    
+    // View Lifecycle
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+    
+    
+    
     // Get number of rows from memes Array
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDelegate.memes.count
