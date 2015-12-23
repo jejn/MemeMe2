@@ -173,25 +173,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-0u-lMC">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-0u-lMC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DMw-5f-kWH">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="120" height="112"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wi5-wa-Zpf">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="wi5-wa-Zpf" customClass="MemeCollectionViewCell" customModule="MemeMe2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="120" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3e-0P-h8F">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="112"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="U3e-0P-h8F" firstAttribute="leading" secondItem="wi5-wa-Zpf" secondAttribute="leading" id="0TY-pI-S3D"/>
+                                            <constraint firstItem="U3e-0P-h8F" firstAttribute="top" secondItem="wi5-wa-Zpf" secondAttribute="top" id="A2b-0R-DkO"/>
+                                            <constraint firstAttribute="bottom" secondItem="U3e-0P-h8F" secondAttribute="bottom" id="fSD-jU-hvB"/>
+                                            <constraint firstAttribute="trailing" secondItem="U3e-0P-h8F" secondAttribute="trailing" id="h9J-qK-csb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="memeView" destination="U3e-0P-h8F" id="9CG-cA-lVh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xf8-aX-Mth" id="ewZ-MA-b28"/>
+                                    <outlet property="delegate" destination="xf8-aX-Mth" id="laK-aq-M4K"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,6 +230,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ksf-0u-lMC" id="RAf-Fo-wEk"/>
+                        <outlet property="flowLayout" destination="DMw-5f-kWH" id="fSX-m4-nif"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRe-jA-RE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -368,6 +390,6 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lTw-mY-WmS"/>
+        <segue reference="0Tp-25-V2k"/>
     </inferredMetricsTieBreakers>
 </document>
