@@ -44,6 +44,7 @@ class TableViewController: UIViewController {
         let meme = appDelegate.memes[indexPath.row]
         
         cell.imageView?.image = meme.memedImage
+        cell.textLabel?.text = meme.topText
         
         return cell
     }

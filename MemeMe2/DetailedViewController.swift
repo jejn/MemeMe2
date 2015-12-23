@@ -13,4 +13,11 @@ class DetailedViewController: UIViewController {
     
     var meme: Meme?
     
+    @IBOutlet weak var detailedImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        detailedImageView.image = meme?.memedImage
+    }
 }
