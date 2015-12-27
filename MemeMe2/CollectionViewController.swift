@@ -13,13 +13,31 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     
     
+    // Global
+    
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    
+    
+    
+    
+    
+    // Outlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
-    // Access to memes array in AppDelegate.swift
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
     
+    
+    
+    // View Lifecycle
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +53,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     
     
+    
+    
+    // Methods
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appDelegate.memes.count
@@ -55,7 +76,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return true
     }
     
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         let meme = appDelegate.memes[indexPath.row]
         let detailedController = storyboard?.instantiateViewControllerWithIdentifier("DetailedVC") as! DetailedViewController
