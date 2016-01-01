@@ -20,4 +20,13 @@ class DetailedViewController: UIViewController {
         
         detailedImageView.image = meme?.memedImage
     }
+    
+    @IBAction func editButton(sender: AnyObject) {
+        
+        let editController = storyboard?.instantiateViewControllerWithIdentifier("MemeVC") as! MemeViewController
+        
+        editController.editMeme = meme
+        
+        navigationController?.popToViewController(editController, animated: true)
+    }
 }

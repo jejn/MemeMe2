@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     
     
     // Global variables
+    
+    var editMeme: Meme?
     
     let imagePicker = UIImagePickerController()
     let topPlaceholder = "TOP"
@@ -48,6 +50,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
+        
+        topTextField.defaultTextAttributes = memeTextAttributes
+        if let topText = editMeme?.topText {
+            topTextField.text = topText
+        } else {
+            topTextField.text = topPlaceholder
+        }
+        topTextField.textAlignment = .Center
+        textFieldDidBeginEditing(topTextField)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -68,13 +79,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Set text fields
         
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = topPlaceholder
-        topTextField.textAlignment = .Center
-        textFieldDidBeginEditing(topTextField)
+        
         
         
         bottomTextField.defaultTextAttributes = memeTextAttributes
+        if let bottomText = editMeme?.bottomText {
+            bottomTextField.text = bottomText
+        } else {
+            bottomTextField.text = bottomPlaceholder
+        }
         bottomTextField.text = bottomPlaceholder
         bottomTextField.textAlignment = .Center
         textFieldDidBeginEditing(bottomTextField)
@@ -237,7 +250,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func cancelAction(sender: AnyObject) {
         
-        // TODO: Add cancel function
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     
