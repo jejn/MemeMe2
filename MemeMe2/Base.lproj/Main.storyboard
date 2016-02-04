@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C5E-ER-V0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C5E-ER-V0g">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -73,8 +73,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-DK-TmJ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-DK-TmJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,7 +109,7 @@
         <!--Table View Controller-->
         <scene sceneID="UMb-Gz-UuB">
             <objects>
-                <viewController id="RS6-lT-215" customClass="TableViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RS6-lT-215" customClass="TableViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vJt-wH-ed6"/>
                         <viewControllerLayoutGuide type="bottom" id="dAt-FM-eH7"/>
@@ -123,7 +123,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" textLabel="EY3-re-PRu" rowHeight="65" style="IBUITableViewCellStyleDefault" id="9z4-OT-qk2">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9z4-OT-qk2" id="5Da-Lt-6Dp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -176,7 +176,7 @@
         <!--Collection View Controller-->
         <scene sceneID="yn2-tl-fQm">
             <objects>
-                <viewController id="xf8-aX-Mth" customClass="CollectionViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xf8-aX-Mth" customClass="CollectionViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OEI-sy-7hy"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkv-Dg-njS"/>
@@ -187,6 +187,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-0u-lMC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DMw-5f-kWH">
                                     <size key="itemSize" width="120" height="112"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -195,25 +196,45 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="wi5-wa-Zpf" customClass="MemeCollectionViewCell" customModule="MemeMe2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="120" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3e-0P-h8F">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3e-0P-h8F">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="112"/>
                                                 </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-Fw-dtO">
+                                                    <rect key="frame" x="8" y="8" width="104" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGh-Yx-b6V">
+                                                    <rect key="frame" x="8" y="87" width="104" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="U3e-0P-h8F" firstAttribute="leading" secondItem="wi5-wa-Zpf" secondAttribute="leading" id="0TY-pI-S3D"/>
                                             <constraint firstItem="U3e-0P-h8F" firstAttribute="top" secondItem="wi5-wa-Zpf" secondAttribute="top" id="A2b-0R-DkO"/>
+                                            <constraint firstItem="ikG-Fw-dtO" firstAttribute="top" secondItem="wi5-wa-Zpf" secondAttribute="topMargin" id="Ber-ZA-q0z"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ikG-Fw-dtO" secondAttribute="trailing" id="Lcz-2j-Osw"/>
+                                            <constraint firstItem="fGh-Yx-b6V" firstAttribute="bottom" secondItem="wi5-wa-Zpf" secondAttribute="bottomMargin" id="O9j-xb-Eex"/>
+                                            <constraint firstItem="ikG-Fw-dtO" firstAttribute="centerX" secondItem="wi5-wa-Zpf" secondAttribute="centerX" id="TbB-YU-IaF"/>
+                                            <constraint firstItem="fGh-Yx-b6V" firstAttribute="centerX" secondItem="wi5-wa-Zpf" secondAttribute="centerX" id="Wna-3L-abn"/>
+                                            <constraint firstItem="ikG-Fw-dtO" firstAttribute="leading" secondItem="wi5-wa-Zpf" secondAttribute="leadingMargin" id="X1C-Gi-Omt"/>
                                             <constraint firstAttribute="bottom" secondItem="U3e-0P-h8F" secondAttribute="bottom" id="fSD-jU-hvB"/>
+                                            <constraint firstItem="fGh-Yx-b6V" firstAttribute="leading" secondItem="wi5-wa-Zpf" secondAttribute="leadingMargin" id="fSL-8y-COR"/>
                                             <constraint firstAttribute="trailing" secondItem="U3e-0P-h8F" secondAttribute="trailing" id="h9J-qK-csb"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="fGh-Yx-b6V" secondAttribute="trailing" id="vmi-MH-ZEq"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="memeCellTextBottom" destination="fGh-Yx-b6V" id="2Ve-2j-OTC"/>
+                                            <outlet property="memeCellTextTop" destination="ikG-Fw-dtO" id="Y2d-PK-uZj"/>
                                             <outlet property="memeView" destination="U3e-0P-h8F" id="9CG-cA-lVh"/>
                                         </connections>
                                     </collectionViewCell>
@@ -402,6 +423,6 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Tp-25-V2k"/>
+        <segue reference="suJ-7Q-W2n"/>
     </inferredMetricsTieBreakers>
 </document>

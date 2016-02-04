@@ -17,6 +17,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    let memeTextAttributes: [String: AnyObject] = [
+        NSStrokeColorAttributeName: UIColor.blackColor(),
+        NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: -3.0]
+    
     
     
     
@@ -67,7 +73,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         let meme = appDelegate.memes[indexPath.row]
         
-        cell.memeView?.image = meme.memedImage
+        cell.memeView?.image = meme.originalImage
+        
+        cell.memeCellTextTop?.text = meme.topText
+        cell.memeCellTextTop?.defaultTextAttributes = memeTextAttributes
+        
+        cell.memeCellTextBottom?.text = meme.bottomText
+        cell.memeCellTextBottom?.defaultTextAttributes = memeTextAttributes
+        
         
         return cell
     }
