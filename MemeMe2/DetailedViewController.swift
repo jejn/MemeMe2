@@ -11,7 +11,7 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
-    var meme: Meme?
+    var meme: Meme!
     
     @IBOutlet weak var detailedImageView: UIImageView!
     
