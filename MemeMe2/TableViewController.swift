@@ -33,6 +33,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     
+    // Table View Methods
+    
     // Get number of rows from memes Array
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDelegate.memes.count
@@ -61,6 +63,18 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         detailedController.meme = meme
         
         navigationController?.pushViewController(detailedController, animated: true)
+    }
+    
+    // Enable Delete button when swiping
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            // Deletes meme from memes Array in AppDelegate
+            appDelegate.memes.removeAtIndex(indexPath.row)
+            
+            // Removes cell from tableView
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
     
     
