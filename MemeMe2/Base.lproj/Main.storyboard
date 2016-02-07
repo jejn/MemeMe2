@@ -90,9 +90,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="8uN-U1-1yB">
                             <connections>
                                 <action selector="editButton:" destination="Lms-QI-8So" id="JT5-tv-oFJ"/>
-                                <segue destination="M6v-B0-v6f" kind="popoverPresentation" identifier="EditSegue" popoverAnchorBarButtonItem="8uN-U1-1yB" id="suJ-7Q-W2n">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -423,6 +420,6 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="suJ-7Q-W2n"/>
+        <segue reference="lTw-mY-WmS"/>
     </inferredMetricsTieBreakers>
 </document>

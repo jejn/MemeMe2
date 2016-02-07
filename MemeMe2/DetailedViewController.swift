@@ -23,10 +23,10 @@ class DetailedViewController: UIViewController {
     
     @IBAction func editButton(sender: AnyObject) {
         
-        let editController = storyboard?.instantiateViewControllerWithIdentifier("MemeVC") as! MemeViewController
+        let editController = storyboard?.instantiateViewControllerWithIdentifier("memeVC") as! MemeViewController
         
         editController.editMeme = meme
         
-        navigationController?.popToViewController(editController, animated: true)
+        navigationController?.presentViewController(editController, animated: true, completion: nil)
     }
 }

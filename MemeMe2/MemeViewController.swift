@@ -76,6 +76,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             memeView.image = meme.originalImage
             topTextField.text = meme.topText
             bottomTextField.text = meme.bottomText
+            shareButton.enabled = true
             
         }
     }
